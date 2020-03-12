@@ -18,7 +18,17 @@ KubeEdge is composed of cloud and edge sides. It is built upon Kubernetes and pr
 
 ## Pre-Requisite
 
-+ Please refer [compatibility-matrix](https://github.com/kubeedge/kubeedge#compatibility-matrix) to understand **Go dependency** and **Kubernetes compatibility** and determine what version of Docker, Kubernetes, Golang can be installed.
++ Please refer [Kubernetes-compatibility](https://github.com/kubeedge/kubeedge#kubernetes-compatibility) to understand **Kubernetes compatibility** and determine what version of Docker, Kubernetes can be installed.
++ Please refer Golang dependency below to understand what version of Golang can be installed.
+
+### Golang dependency
+
+|                         | Golang 1.10    | Golang 1.11     | Golang 1.12     | Golang 1.13     |
+|-------------------------|----------------|-----------------|-----------------|-----------------|
+| KubeEdge 1.0            | ✓              | ✓               | ✓               | ✗               |
+| KubeEdge 1.1            | ✗              | ✗               | ✓               | ✗               |
+| KubeEdge 1.2            | ✗              | ✗               | ✓               | ✓               |
+| KubeEdge HEAD (master)  | ✗              | ✗               | ✓               | ✓               |
 
 ### Cloud side (KubeEdge Master)
 
@@ -30,7 +40,7 @@ KubeEdge is composed of cloud and edge sides. It is built upon Kubernetes and pr
 
 + [Creating Kubernetes cluster with kubeadm](<https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/>)
 
-If you are creating Kubernetes cluster for just testing KubeEdge, maybe start with Flannel.
+If you are creating Kubernetes cluster for just testing KubeEdge, you can start with Flannel.
 
 Check Kubernetes Master Status: It should be `ready`.
 
@@ -38,7 +48,7 @@ Check Kubernetes Master Status: It should be `ready`.
 kubectl get nodes
 
 NAME               STATUS   ROLES    AGE    VERSION
-kubeedge-master   Ready    master   4d3h   v1.16.1
+kubeedge-master   Ready    master   4d3h   v1.17.1
 ```
 
 ### Edge side (KubeEdge Worker Node)
